@@ -13,7 +13,7 @@ This Chrome extension adds keyboard shortcuts for OneDrive revision controls.
 
 ### 1. Download the Extension
 
-Ensure you have the following files in the `onedrive-shortcuts` folder (download them as zip using the 'Code' button [here](https://github.com/alejoacelas/claude-experiments/edit/claude/onedrive-revision-shortcuts-011CV2DaQ5ZJ7Lb1iT5AZZQP)):
+Ensure you have the following files in the `onedrive-shortcuts` folder (download them as zip using the 'Code' button [here](https://github.com/alejoacelas/claude-experiments/tree/claude/onedrive-revision-shortcuts-011CV2DaQ5ZJ7Lb1iT5AZZQP)):
 - `manifest.json`
 - `content.js`
 - `INSTALL.md` (this file)
