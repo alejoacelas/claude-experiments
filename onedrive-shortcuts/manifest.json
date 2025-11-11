@@ -5,15 +5,18 @@
   "description": "Adds keyboard shortcuts (Ctrl+[ and Ctrl+]) for OneDrive revision controls",
   "permissions": [],
   "host_permissions": [
-    "https://onedrive.live.com/*"
+    "https://onedrive.live.com/*",
+    "https://*.officeapps.live.com/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://onedrive.live.com/personal/*"
+        "https://onedrive.live.com/personal/*",
+        "https://*.officeapps.live.com/*"
       ],
       "js": ["content.js"],
-      "run_at": "document_end"
+      "run_at": "document_end",
+      "all_frames": true
     }
   ],
   "icons": {

@@ -9,7 +9,11 @@
 (function() {
   'use strict';
 
-  console.log('OneDrive Revision Shortcuts extension loaded');
+  // Detect which frame we're in
+  const isIframe = window !== window.top;
+  const frameInfo = isIframe ? `[iframe: ${window.location.hostname}]` : '[main page]';
+
+  console.log(`OneDrive Revision Shortcuts extension loaded ${frameInfo}`);
 
   // Constants for retry logic
   const RETRY_INTERVAL_MS = 500;
@@ -157,7 +161,14 @@
   }, true); // Use capture phase to intercept before other handlers
 
   // Log keyboard shortcut availability
-  console.log('Keyboard shortcuts active:');
+  console.log(`Keyboard shortcuts active ${frameInfo}:`);
   console.log('  Ctrl+[ → Accept Revision');
   console.log('  Ctrl+] → Next Revision');
+
+  // For iframe, log when the document is in focus
+  if (isIframe) {
+    window.addEventListener('focus', () => {
+      console.log('📝 Word editor iframe has focus - shortcuts ready');
+    }, { once: true });
+  }
 })();

@@ -46,6 +46,7 @@ You should see the extension appear in your extensions list with:
 
 1. Navigate to `https://onedrive.live.com`
 2. Open a document with revision tracking (e.g., Word document with tracked changes)
+3. **Important**: Click inside the document editor to ensure it has focus
 
 ### 2. Use the Shortcuts
 
@@ -53,13 +54,16 @@ When viewing a document with revisions:
 - Press **Ctrl + [** to accept the current revision
 - Press **Ctrl + ]** to move to the next revision
 
+**Note**: The shortcuts work inside the Word Online editor, which loads in an iframe at `*.officeapps.live.com`
+
 ### 3. Check Console (Optional)
 
 To see debug messages:
 1. Right-click on the page → "Inspect" → "Console" tab
 2. Look for messages like:
-   - "OneDrive Revision Shortcuts extension loaded"
-   - "Keyboard shortcuts active"
+   - "OneDrive Revision Shortcuts extension loaded [iframe: ...]"
+   - "Keyboard shortcuts active [iframe: ...]"
+   - "Word editor iframe has focus - shortcuts ready"
    - Success/waiting messages when shortcuts are triggered
 
 ## Troubleshooting
@@ -69,11 +73,14 @@ To see debug messages:
 **Issue**: Pressing Ctrl+[ or Ctrl+] doesn't do anything
 
 **Solutions**:
-1. **Check you're on the correct page**: Shortcuts only work on `https://onedrive.live.com/personal/*` URLs
+1. **Click inside the document editor**: The Word Online editor is in an iframe, so you need to click inside the document to give it focus
 2. **Verify revision buttons exist**: The shortcuts only work when revision controls are visible in the document
-3. **Check browser console**: Open Developer Tools (F12) and check for error messages
-4. **Reload the page**: Press F5 or Ctrl+R to refresh the page
-5. **Verify extension is enabled**: Go to `chrome://extensions/` and ensure the extension toggle is ON
+3. **Check browser console**: Open Developer Tools (F12) and check for messages:
+   - Look for "OneDrive Revision Shortcuts extension loaded [iframe: word-edit.officeapps.live.com]"
+   - If you only see "[main page]", the iframe version isn't loading
+4. **Reload the extension**: Go to `chrome://extensions/`, find the extension, and click the refresh icon (🔄)
+5. **Reload the document**: Press F5 or Ctrl+R to refresh the page after reloading the extension
+6. **Verify extension is enabled**: Go to `chrome://extensions/` and ensure the extension toggle is ON
 
 ### Extension Not Loading
 
@@ -105,6 +112,14 @@ To see debug messages:
 3. **Test in Incognito mode**: Open Incognito window and enable this extension only
 
 ## How It Works
+
+### Cross-Frame Support
+
+OneDrive Word Online loads the document editor in an iframe at `*.officeapps.live.com`. The extension:
+- Runs on both the main OneDrive page and inside the Word Online iframe
+- Uses `"all_frames": true` in the manifest to inject into all frames
+- Detects which frame it's running in and logs accordingly
+- Keyboard events are captured in the iframe where the editor lives
 
 ### Button Detection
 
@@ -147,8 +162,11 @@ To remove the extension:
 ## Technical Details
 
 - **Manifest Version**: 3 (latest Chrome extension standard)
-- **Target Domain**: `https://onedrive.live.com/personal/*`
-- **Permissions**: Host permissions for `onedrive.live.com`
+- **Target Domains**:
+  - `https://onedrive.live.com/personal/*` (main OneDrive page)
+  - `https://*.officeapps.live.com/*` (Word Online iframe)
+- **Permissions**: Host permissions for `onedrive.live.com` and `*.officeapps.live.com`
+- **Frame Injection**: Uses `"all_frames": true` to run in all iframes
 - **Key Detection**: Uses `event.ctrlKey` specifically (ensures Ctrl works on Mac)
 - **Retry Mechanism**: 500ms intervals, 3-second timeout
 
