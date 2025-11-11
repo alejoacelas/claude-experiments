@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "OneDrive Revision Shortcuts",
+  "version": "1.0.0",
+  "description": "Adds keyboard shortcuts (Ctrl+[ and Ctrl+]) for OneDrive revision controls",
+  "permissions": [],
+  "host_permissions": [
+    "https://onedrive.live.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://onedrive.live.com/personal/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>⌨️</text></svg>",
+    "48": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><text y='42' font-size='42'>⌨️</text></svg>",
+    "128": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><text y='112' font-size='112'>⌨️</text></svg>"
+  }
+}
