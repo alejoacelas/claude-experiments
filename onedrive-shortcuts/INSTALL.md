@@ -7,7 +7,7 @@ This Chrome extension adds keyboard shortcuts for OneDrive revision controls.
 - **Ctrl + [** → Accept Revision
 - **Ctrl + ]** → Reject Revision
 - **Ctrl + '** → Previous Revision
-- **Ctrl + \** → Next Revision
+- **Ctrl + \\** → Next Revision
 
 ## Installation Steps
 
