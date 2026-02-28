@@ -6,7 +6,6 @@
 \usepackage{natbib}
 \usepackage{algorithm}
 \usepackage{algorithmic}
-\usepackage{booktabs}
 
 \title{Adaptive Memory Networks for Continual Learning in Non-Stationary Environments}
 \author{
@@ -24,13 +23,8 @@
   MIT CSAIL\\
   Cambridge, MA\\
   \texttt{priya@mit.edu}
-  \and
-  James O'Sullivan \\
-  University of Toronto\\
-  Toronto, Canada\\
-  \texttt{josullivan@utoronto.ca}
 }
-\date{January 2026}
+\date{October 2025}
 
 \begin{document}
 
@@ -43,27 +37,22 @@ Continual learning remains one of the fundamental challenges in modern machine l
 \section{Introduction}
 \label{sec:introduction}
 
-The ability to learn continuously from a stream of experiences without forgetting previously acquired knowledge is a hallmark of biological intelligence \citep{mccloskey1989catastrophic}. Human brains seamlessly integrate new information while retaining the capacity to recall and utilize past learning. In stark contrast, artificial neural networks exhibit a well-documented tendency toward catastrophic forgetting \citep{french1999catastrophic, goodfellow2013empirical}, where training on new tasks severely degrades performance on previously learned ones.
+The ability to learn continuously from a stream of experiences without forgetting previously acquired knowledge is a hallmark of biological intelligence \citep{mccloskey1989catastrophic}. Human brains can seamlessly integrate new information while retaining the capacity to recall and utilize past learning. In stark contrast, artificial neural networks exhibit a well-documented tendency toward catastrophic forgetting \citep{french1999catastrophic, goodfellow2013empirical}, where training on new tasks can severely degrade performance on previously learned ones.
 
 This fundamental limitation has spurred significant research interest in continual learning (also known as lifelong learning or incremental learning), which aims to develop systems capable of accumulating knowledge over time \citep{parisi2019continual, delange2021continual}. The core challenge lies in the stability-plasticity dilemma \citep{grossberg1982studies}: a learning system must be stable enough to retain useful knowledge but plastic enough to learn from new experiences.
-
-\subsection{Motivation and Key Insight}
-
-Before discussing prior approaches, we highlight the key observation that motivates our work. Existing continual learning methods typically treat all learned representations as equally important, applying uniform protection or replay strategies. However, in practice, some representations serve as ``bridges'' between tasks---capturing shared structure that facilitates transfer---while others are task-specific and prone to causing interference. This asymmetry suggests that an adaptive, representation-aware approach to memory management should outperform uniform strategies.
 
 Existing approaches to continual learning can be broadly categorized into three families. Regularization-based methods \citep{kirkpatrick2017overcoming, zenke2017continual, aljundi2018memory} add constraints to the loss function to prevent significant changes to parameters deemed important for previous tasks. Architecture-based methods \citep{rusu2016progressive, yoon2018lifelong, li2019learn} allocate dedicated network capacity for new tasks while preserving existing knowledge. Replay-based methods \citep{rebuffi2017icarl, shin2017continual, rolnick2019experience} maintain a buffer of past experiences that are interleaved with new data during training.
 
 While each family has demonstrated promising results, they all face significant limitations. Regularization methods can become overly conservative, gradually losing plasticity as constraints accumulate. Architecture methods require growing network capacity, leading to scalability concerns. Replay methods rely on storing raw samples, raising both privacy concerns and questions about the quality of the replay buffer as it ages.
 
-In this work, we propose Adaptive Memory Networks (AMN), which combine the strengths of these approaches while mitigating their individual weaknesses. AMN maintains an external memory module that stores compressed, task-agnostic representations rather than raw samples. A learned attention mechanism selectively retrieves relevant memories during both training and inference, enabling effective knowledge transfer across tasks. Crucially, AMN incorporates a memory consolidation process inspired by the complementary learning systems theory from neuroscience \citep{mcclelland1995there, kumaran2016learning}, which periodically reorganizes stored representations to prevent interference while promoting beneficial cross-task generalization.
+In this work, we propose Adaptive Memory Networks (AMN), which combine the strengths of these approaches while mitigating their individual weaknesses. AMN maintains an external memory module that stores compressed, task-agnostic representations rather than raw samples. A learned attention mechanism selectively retrieves relevant memories during training and inference, enabling effective knowledge transfer across tasks. Crucially, AMN includes a memory consolidation process inspired by the complementary learning systems theory from neuroscience \citep{mcclelland1995there, kumaran2016learning}, which periodically reorganizes stored representations to prevent interference while promoting beneficial cross-task generalization.
 
 Our main contributions are as follows:
 \begin{itemize}
     \item We introduce AMN, a novel continual learning architecture with an adaptive external memory that stores compressed representations and supports efficient retrieval through learned attention.
     \item We propose a memory consolidation algorithm inspired by biological memory systems that provably converges under mild distributional assumptions.
     \item We introduce StreamingWorld, a challenging benchmark for evaluating continual learning in non-stationary environments with realistic distribution shifts.
-    \item We conduct extensive scaling experiments demonstrating AMN's robustness to long task sequences (50+ tasks), a regime where most existing methods fail.
-    \item We demonstrate state-of-the-art results across multiple benchmarks, achieving 12--18\% improvement in average accuracy over existing methods.
+    \item We demonstrate state-of-the-art results across multiple benchmarks, achieving 12-18\% improvement in average accuracy over existing methods.
 \end{itemize}
 
 \section{Related Work}
@@ -96,19 +85,11 @@ We focus on the challenging \emph{task-free} setting, where the learner does not
 
 \subsection{Architecture Overview}
 
-AMN consists of four main components: (1) a feature extractor $f_\theta$, (2) an external memory module $\mathcal{M}$, (3) a task context estimator $h_\psi$, and (4) a task-adaptive classifier $g_\phi$. The feature extractor maps inputs to a shared representation space. The memory module stores and retrieves compressed representations. The task context estimator infers a soft task descriptor from recent inputs. The classifier produces predictions conditioned on both the input representation and retrieved memories.
+AMN consists of three main components: (1) a feature extractor $f_\theta$, (2) an external memory module $\mathcal{M}$, and (3) a task-adaptive classifier $g_\phi$. The feature extractor maps inputs to a shared representation space. The memory module stores and retrieves compressed representations. The classifier produces predictions conditioned on both the input representation and retrieved memories.
 
 \subsubsection{Feature Extractor}
 
 The feature extractor $f_\theta: \mathcal{X} \rightarrow \mathbb{R}^d$ maps raw inputs to a $d$-dimensional representation space. We use a standard ResNet-18 backbone \citep{he2016deep} for image-based tasks, though any differentiable encoder can be used. The representation is normalized to lie on the unit hypersphere: $z = f_\theta(x) / \|f_\theta(x)\|$.
-
-\subsubsection{Task Context Estimator}
-
-The task context estimator $h_\psi$ is a lightweight recurrent module that processes a sliding window of recent input representations to produce a task context vector $c_t \in \mathbb{R}^{d_c}$:
-\begin{equation}
-    c_t = h_\psi(z_{t-W:t})
-\end{equation}
-where $W$ is the window size. This context vector modulates the memory retrieval process, allowing AMN to adapt its memory access patterns to the current task regime without requiring explicit task labels.
 
 \subsubsection{External Memory Module}
 
@@ -159,7 +140,7 @@ where $k_i^{(0)}$ are the pre-consolidation keys and $\lambda$ controls the trad
 Under the assumption that the task distributions $\{\mathcal{D}_i\}$ have bounded support and the feature representations have bounded norm, the consolidation procedure in Equation~\ref{eq:consolidation} converges to a fixed point that achieves $\epsilon$-optimal interference minimization with at most $O(M^2 / \epsilon)$ gradient steps.
 \end{theorem}
 
-The proof is provided in Appendix~\ref{app:proof}. The key insight is that the consolidation objective is strongly convex in the memory keys when the margin $\delta$ is sufficiently large, which guarantees efficient convergence to a unique minimizer.
+The proof is provided in Appendix A. The key insight is that the consolidation objective is strongly convex in the memory keys when the margin $\delta$ is sufficiently large, ensuring efficient convergence.
 
 \subsection{Training Procedure}
 
@@ -178,19 +159,17 @@ where $\bar{w}$ is the normalized usage distribution across memory slots. This e
 Algorithm~\ref{alg:training} summarizes the complete training procedure.
 
 \begin{algorithm}
-\caption{AMN Training Procedure}
+\caption{AMN Training}
 \label{alg:training}
 \begin{algorithmic}[1]
 \REQUIRE Data stream $\{(x_t, y_t)\}$, memory $\mathcal{M}$, consolidation threshold $\tau$
-\STATE Initialize context buffer $\mathcal{B} \leftarrow \emptyset$
 \FOR{each mini-batch $(X, Y)$ from the data stream}
     \STATE Extract features: $Z = f_\theta(X)$
-    \STATE Update context buffer and estimate task context: $c_t = h_\psi(\mathcal{B})$
-    \STATE Retrieve memories: $R = \text{Retrieve}(\mathcal{M}, Z, c_t)$
-    \STATE Compute gated representation: $\hat{Z} = \text{Gate}(Z, R, c_t)$
+    \STATE Retrieve memories: $R = \text{Retrieve}(\mathcal{M}, Z)$
+    \STATE Compute gated representation: $\hat{Z} = \text{Gate}(Z, R)$
     \STATE Compute predictions: $\hat{Y} = g_\phi(\hat{Z})$
-    \STATE Compute loss: $\mathcal{L} = \mathcal{L}_{\text{task}} + \alpha \mathcal{L}_{\text{mem}} + \gamma \mathcal{L}_{\text{reg}} + \mu \mathcal{L}_{\text{ctx}}$
-    \STATE Update all parameters: $\theta, \phi, \psi \leftarrow \text{Adam}(\mathcal{L})$
+    \STATE Compute loss: $\mathcal{L} = \mathcal{L}_{\text{task}}(\hat{Y}, Y) + \alpha \mathcal{L}_{\text{mem}} + \gamma \mathcal{L}_{\text{reg}}$
+    \STATE Update parameters: $\theta, \phi \leftarrow \text{Adam}(\mathcal{L})$
     \STATE Write new memories: $\text{Write}(\mathcal{M}, Z)$
     \IF{$\mathcal{I}(\mathcal{M}) > \tau$}
         \STATE Consolidate memories (Equation~\ref{eq:consolidation})
@@ -298,30 +277,6 @@ AMN (Ours) & \textbf{81.3} $\pm$ \textbf{0.7} & \textbf{72.4} $\pm$ \textbf{0.8}
 
 The results on StreamingWorld are particularly notable. On the most challenging SW-Hard setting, AMN achieves 58.9\% accuracy, outperforming CLS-ER by 16.8 percentage points. This substantial gap suggests that AMN's memory consolidation mechanism is especially effective at handling the complex, non-stationary distribution shifts present in StreamingWorld.
 
-\subsection{Scaling to Long Task Sequences}
-
-A critical question for practical deployment is how continual learning methods perform as the number of tasks grows. We evaluate all methods on StreamingWorld with sequences of 10, 25, 50, and 100 tasks.
-
-\begin{table}[h]
-\centering
-\caption{Average accuracy (\%) on StreamingWorld-Medium as a function of the number of tasks in the sequence.}
-\label{tab:scaling}
-\begin{tabular}{@{}lcccc@{}}
-\toprule
-Method & 10 tasks & 25 tasks & 50 tasks & 100 tasks \\
-\midrule
-EWC & 38.7 $\pm$ 2.1 & 29.4 $\pm$ 2.8 & 18.2 $\pm$ 3.1 & 11.5 $\pm$ 3.4 \\
-ER & 51.4 $\pm$ 1.5 & 44.2 $\pm$ 1.9 & 35.7 $\pm$ 2.2 & 27.3 $\pm$ 2.6 \\
-CLS-ER & 58.6 $\pm$ 1.1 & 50.1 $\pm$ 1.4 & 40.8 $\pm$ 1.7 & 32.9 $\pm$ 2.0 \\
-L2P & 59.8 $\pm$ 1.0 & 51.3 $\pm$ 1.3 & 41.5 $\pm$ 1.6 & 33.7 $\pm$ 1.9 \\
-\midrule
-AMN (Ours) & \textbf{72.4} $\pm$ \textbf{0.8} & \textbf{67.8} $\pm$ \textbf{0.9} & \textbf{62.1} $\pm$ \textbf{1.1} & \textbf{56.4} $\pm$ \textbf{1.3} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-AMN demonstrates substantially better scaling behavior. While baseline methods lose 40--70\% of their 10-task accuracy when scaling to 100 tasks, AMN retains 78\% of its accuracy. This robustness stems from the consolidation mechanism, which actively prevents memory interference even as the number of stored representations grows.
-
 \subsection{Ablation Studies}
 
 To understand the contribution of each component, we conduct ablation studies on Split-CIFAR100 and SW-Hard.
@@ -365,15 +320,6 @@ To gain insight into AMN's memory representations, we visualize the learned memo
 
 Interestingly, we observe that some memory slots serve as ``bridge'' representations, positioned between clusters. These bridge memories facilitate knowledge transfer by capturing shared features across related tasks. For example, in the StreamingWorld outdoor-indoor transition, bridge memories capture general scene structure features that are relevant to both domains.
 
-\subsection{Role of the Task Context Estimator}
-
-The task context estimator provides significant benefits beyond what is captured by the ablation numbers alone. By analyzing the learned context representations, we find that the estimator:
-\begin{enumerate}
-    \item Detects distribution shifts approximately 2--3 mini-batches before they become apparent in the loss signal.
-    \item Produces context vectors that naturally cluster by task regime, even without explicit task labels.
-    \item Enables the gating mechanism to smoothly transition between relying on memory versus current input, with memory reliance increasing during task transitions.
-\end{enumerate}
-
 \subsection{Comparison with Biological Memory}
 
 AMN's consolidation mechanism bears several similarities to biological memory consolidation observed during sleep \citep{walker2017sleep}. In both systems:
@@ -392,19 +338,15 @@ Despite its strong performance, AMN has several limitations. First, the consolid
 \section{Conclusion}
 \label{sec:conclusion}
 
-We have presented Adaptive Memory Networks (AMN), a novel approach to continual learning that integrates an external memory module with biologically-inspired consolidation and a learned task context estimator. AMN addresses the stability-plasticity dilemma through three complementary mechanisms: adaptive memory management with importance-weighted replacement, selective retrieval via context-modulated attention, and periodic consolidation to minimize inter-task interference.
+We have presented Adaptive Memory Networks (AMN), a novel approach to continual learning that combines an external memory module with biologically-inspired consolidation. AMN addresses the stability-plasticity dilemma through adaptive memory management, with selective retrieval via learned attention and periodic consolidation to minimize interference. Our experimental results demonstrate state-of-the-art performance across standard benchmarks and the newly introduced StreamingWorld benchmark.
 
-Our experimental results demonstrate consistent state-of-the-art performance across standard benchmarks and the newly introduced StreamingWorld benchmark, with particularly strong results in challenging settings involving long task sequences, abrupt distribution shifts, and class imbalance. The scaling experiments reveal that AMN maintains robust performance even with 100-task sequences, a regime where existing methods suffer severe degradation.
-
-Key findings include the critical importance of the consolidation mechanism for managing complex distribution shifts, the value of task context estimation for adaptive memory retrieval, the emergence of bridge memory representations that facilitate cross-task transfer, and the memory efficiency advantages of storing compressed representations over raw samples.
+Key findings include the critical importance of the consolidation mechanism for handling complex distribution shifts, the emergence of ``bridge'' memory representations that facilitate cross-task transfer, and the memory efficiency advantages of storing compressed representations over raw samples.
 
 Future work will explore several promising directions: adaptive memory sizing based on task complexity, extension to multi-modal continual learning, and investigation of multi-timescale consolidation strategies that more closely mirror biological memory systems. We believe that drawing deeper connections between artificial and biological memory systems will continue to yield advances in continual learning.
 
-Future work will pursue several promising directions: adaptive memory sizing driven by task complexity signals, extension to multi-modal continual learning, investigation of multi-timescale consolidation strategies that more closely mirror biological memory systems, and exploration of federated continual learning settings where memory must be consolidated across distributed agents. We believe that continued cross-pollination between neuroscience and machine learning will yield further advances in building systems that learn continuously and robustly.
-
 \section*{Acknowledgments}
 
-We thank the anonymous reviewers for their insightful feedback, which significantly improved this paper. We also thank Elena Voronova for helpful discussions on the biological plausibility of our consolidation mechanism. This work was supported by NSF Grant IIS-2023456, the DARPA Lifelong Learning Machines program, a Google Research Award, and computing resources provided by Google Cloud and the Vector Institute. S.C.\ is supported by a Stanford Graduate Fellowship. P.R.\ is supported by an NSF CAREER award. J.O.\ is supported by a CIFAR AI Chair.
+We thank the anonymous reviewers for their constructive feedback. This work was supported by NSF Grant IIS-2023456, the DARPA Lifelong Learning Machines program, and computing resources from Google Cloud. S.C. is supported by a Stanford Graduate Fellowship. P.R. is supported by an NSF CAREER award.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
