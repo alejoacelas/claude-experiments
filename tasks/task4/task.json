@@ -1,0 +1,13 @@
+{
+  "task_id": "task4",
+  "title": "Full Merge Except Experiments Section",
+  "difficulty": "medium",
+  "description": "You are helping a researcher merge a revised version of their paper. Apply ALL changes from paper_v2.tex to paper_v1.tex EXCEPT for changes in the Experiments section (Section 5, \\section{Experiments}).\n\nSpecifically:\n- Apply all changes in: preamble, abstract, introduction, related work, method, StreamingWorld benchmark, analysis and discussion, conclusion, acknowledgments, and all appendices.\n- Do NOT apply any changes within the Experiments section. This includes:\n  - Do not add new subsections within Experiments (like 'Scaling to Long Task Sequences')\n  - Do not modify tables within Experiments\n  - Do not change baseline descriptions or results text within Experiments\n  - Do not change the experimental setup description\n  Keep the entire Experiments section exactly as it is in v1.\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/paper_v1.tex\nThe revised file is at: WORK_DIR/paper_v2.tex\n\nWrite the result to: WORK_DIR/output.tex",
+  "doc_pair": ["paper_v1.tex", "paper_v2.tex"],
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["all_changes_outside_experiments"],
+    "reject": ["all_changes_in_experiments"]
+  },
+  "notes": "Tests the agent's ability to correctly identify section boundaries and apply/reject changes based on document structure. The tricky part is that some changes in the Method section (like the Task Context Estimator) have downstream effects on Experiments."
+}

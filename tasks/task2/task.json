@@ -1,0 +1,13 @@
+{
+  "task_id": "task2",
+  "title": "Apply All Content Additions, Reject All Content Removals",
+  "difficulty": "hard",
+  "description": "You are helping a researcher merge changes into their LaTeX paper. A revised version (paper_v2.tex) has many changes. The researcher wants to apply a specific policy:\n\n1. ADD all new content that appears in v2 but not in v1. This includes:\n   - The new author (James O'Sullivan)\n   - The new 'Motivation and Key Insight' subsection\n   - The new 'Task Context Estimator' subsection and all its content\n   - The new 'Scaling to Long Task Sequences' subsection and its table\n   - The new 'Role of the Task Context Estimator' subsection\n   - The new sentence about scaling in the abstract\n   - The new paragraph about constant memory footprint\n   - The new contrastive loss equations and descriptions\n   - The new contribution bullet point about scaling experiments\n   - The new paragraph in the conclusion about experimental results\n   - Elena Voronova acknowledgment and new funding sources\n   - The public URL for StreamingWorld\n\n2. Do NOT remove any content that exists in v1. If v2 deletes something from v1, keep the v1 version.\n\n3. For blocks that are MODIFIED (exist in both but changed), keep the v1 version (do not apply rewording, tense changes, etc.)\n\n4. The new content should be inserted in the logical location where it appears in v2.\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/paper_v1.tex\nThe revised file is at: WORK_DIR/paper_v2.tex\n\nWrite the result to: WORK_DIR/output.tex",
+  "doc_pair": ["paper_v1.tex", "paper_v2.tex"],
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["added_content"],
+    "reject": ["deleted_content", "modified_content", "moved_content"]
+  },
+  "notes": "This is hard because the agent must insert new content in correct positions while preserving all original text exactly. The v2 has new sections interleaved with existing content."
+}

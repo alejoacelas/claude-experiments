@@ -1,0 +1,13 @@
+{
+  "task_id": "task3",
+  "title": "Apply Only Small Wording Changes, Reject Large Structural Changes",
+  "difficulty": "hard",
+  "description": "You are helping a researcher apply copyediting changes to their LaTeX paper. A revised version (paper_v2.tex) has many changes, but the researcher only wants to apply minor wording improvements - NOT major structural or content changes.\n\nApply these types of changes from v2:\n1. Tense changes (e.g., 'can severely degrade' -> 'severely degrades')\n2. Small word substitutions that improve clarity (e.g., 'also known as' -> 'also referred to as', 'leading to' -> 'which raises')\n3. Minor phrase improvements (e.g., 'use attention-based mechanisms' -> 'employed attention-based mechanisms')\n4. Small clarifications (e.g., 'maintain performance' -> 'maintain good performance')\n5. Punctuation and typographic fixes (en-dashes, spacing)\n6. Reference style fixes (e.g., 'Appendix A' -> 'Appendix~\\ref{app:proof}')\n\nDo NOT apply:\n- New sections or subsections\n- New paragraphs or sentences\n- New authors or date changes\n- New packages\n- Table restructuring\n- New baselines in tables or experiments\n- New equations or algorithm changes\n- Paragraph rearrangements\n- Deletion of existing content\n- Major rewrites of sentences (more than ~5 words changed)\n\nThis is a copyediting pass. Be precise: apply only the small wording tweaks.\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/paper_v1.tex\nThe revised file is at: WORK_DIR/paper_v2.tex\n\nWrite the result to: WORK_DIR/output.tex",
+  "doc_pair": ["paper_v1.tex", "paper_v2.tex"],
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["tense_changes", "word_substitutions", "phrase_improvements", "punctuation_fixes", "reference_fixes"],
+    "reject": ["new_sections", "new_paragraphs", "new_authors", "date_changes", "table_restructuring", "new_baselines", "new_equations", "deletions", "major_rewrites"]
+  },
+  "notes": "This is the hardest task because it requires the agent to look at each modified block, identify which specific changes within a block are small wording tweaks vs. major changes, and apply only the former. Many blocks contain BOTH types of changes mixed together."
+}

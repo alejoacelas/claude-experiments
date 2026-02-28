@@ -1,0 +1,14 @@
+{
+  "task_id": "task1",
+  "title": "Selective Paper Revision: Apply Only Formatting and Citation Updates",
+  "difficulty": "medium",
+  "description": "You are helping a researcher update their LaTeX paper. The paper has been reviewed and a revised version (paper_v2.tex) exists with many changes. However, the researcher only wants to apply specific categories of changes from v2 to v1 right now:\n\n1. Apply all LaTeX formatting improvements (booktabs package, table formatting with toprule/midrule/bottomrule, proper number formatting with \\, spacing, en-dash fixes like 12-18 -> 12--18)\n2. Apply the date change from 'October 2025' to 'January 2026'\n3. Apply all changes to the \\hline to \\toprule/\\midrule/\\bottomrule table formatting\n4. Apply the @{} column formatting additions in tables\n\nDo NOT apply:\n- Any new content (new sections, new paragraphs, new author)\n- Any rewording of existing text\n- Any new baselines (L2P) in tables\n- Any structural changes (moving paragraphs, adding subsections)\n\nYour output should be the modified paper_v1.tex with ONLY the formatting/citation changes applied.\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/paper_v1.tex\nThe revised file is at: WORK_DIR/paper_v2.tex\n\nWrite the result to: WORK_DIR/output.tex",
+  "doc_pair": ["paper_v1.tex", "paper_v2.tex"],
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["formatting", "date", "table_style", "package_additions"],
+    "reject": ["new_content", "rewording", "new_baselines", "structural_changes", "new_author"]
+  },
+  "relevant_change_numbers": [1, 2, 25, 46, 48, 55, 84, 88, 92, 97],
+  "notes": "This task tests the agent's ability to identify and apply only formatting changes while leaving content unchanged. The tricky part is that many blocks contain BOTH formatting and content changes."
+}
