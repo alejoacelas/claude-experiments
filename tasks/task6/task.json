@@ -1,0 +1,15 @@
+{
+  "task_id": "task6",
+  "title": "Fix Only Genuine Spelling Errors in Design Document",
+  "difficulty": "hard",
+  "description": "You are reviewing a technical design document (design_v1.md). A revised version (design_v2.md) exists with many changes, including spelling fixes, rewording, new content, and British English conversions.\n\nYour job is to fix ONLY the genuine spelling errors and typos in design_v1.md. The revised version converts to British English throughout (e.g., 'optimized' -> 'optimised', 'organized' -> 'organised'). These are NOT typos — they are intentional style changes that you must NOT apply.\n\nApply ONLY these types of fixes:\n- Genuine misspellings (words that are incorrect in ANY variety of English)\n- Clear typos (missing letters, transposed letters)\n- Incorrect word usage that is clearly a typo (e.g., 'then' used where 'than' is correct)\n\nDo NOT apply:\n- British English conversions (optimized->optimised, organized->organised, aging->ageing, behavior->behaviour, etc.)\n- Rewording of sentences\n- New content or sections\n- Number or specification changes\n- Code changes\n- Structural changes (section reordering)\n- Any changes to section headings beyond spelling fixes\n- Date, version, or metadata changes\n- New reviewer additions\n\nHere are some examples of genuine typos to look for (this list may not be exhaustive):\n- 'Summery' should be 'Summary'\n- 'Consistancy' should be 'Consistency'\n- 'algorith' should be 'algorithm'\n- 'paralel' should be 'parallel'\n- 'asynchronusly' should be 'asynchronously'\n- 'hierachical' should be 'hierarchical'\n- 'then' used where 'than' is correct\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/design_v1.md\nThe revised file is at: WORK_DIR/design_v2.md\n\nWrite the result to: WORK_DIR/output.md",
+  "doc_pair": ["design_v1.md", "design_v2.md"],
+  "output_file": "output.md",
+  "expected_file": "expected_output.md",
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["genuine_typos", "misspellings"],
+    "reject": ["british_english", "rewording", "new_content", "number_changes", "code_changes", "structural_changes", "metadata_changes"]
+  },
+  "notes": "This task is hard because the v2 document converts to British English throughout, which looks like spelling corrections but is actually a style change. The agent must distinguish genuine typos (Summery, Consistancy, algorith) from British English conversions (optimized->optimised). Many paragraphs contain BOTH types of changes interleaved in the same diff hunk."
+}

@@ -1,0 +1,2068 @@
+[
+  {
+    "run_id": "task10_diff-only_run1_20260301_043712",
+    "task_id": "task10",
+    "task_title": "Multi-Document Selective Merge: Apply Spelling Fixes Across Combined Document",
+    "difficulty": "very-hard",
+    "mode": "diff-only",
+    "timestamp": "20260301_043712",
+    "agent_duration": 404.2710180282593,
+    "agent_success": true,
+    "score": 100.0,
+    "metrics": {
+      "line_metrics": {
+        "line_precision": 1.0,
+        "line_recall": 1.0,
+        "line_f1": 1.0,
+        "lines_correct": 556,
+        "lines_extra": 0,
+        "lines_missing": 0,
+        "total_expected_lines": 556,
+        "total_actual_lines": 556
+      },
+      "block_metrics": {
+        "block_exact_accuracy": 1.0,
+        "block_close_accuracy": 1.0,
+        "blocks_exact_match": 288,
+        "blocks_close_match": 0,
+        "blocks_missing": 0,
+        "blocks_extra": 0,
+        "total_expected_blocks": 288,
+        "total_actual_blocks": 288,
+        "block_details": [
+          {
+            "expected_id": "B000",
+            "actual_id": "B000",
+            "type": "metadata",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B001",
+            "actual_id": "B001",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B002",
+            "actual_id": "B002",
+            "type": "environment",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B003",
+            "actual_id": "B003",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B004",
+            "actual_id": "B004",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B005",
+            "actual_id": "B005",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B006",
+            "actual_id": "B006",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B007",
+            "actual_id": "B007",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B008",
+            "actual_id": "B008",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B009",
+            "actual_id": "B009",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B010",
+            "actual_id": "B010",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B011",
+            "actual_id": "B011",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B012",
+            "actual_id": "B012",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B013",
+            "actual_id": "B013",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B014",
+            "actual_id": "B014",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B015",
+            "actual_id": "B015",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B016",
+            "actual_id": "B016",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B017",
+            "actual_id": "B017",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B018",
+            "actual_id": "B018",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B019",
+            "actual_id": "B019",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B020",
+            "actual_id": "B020",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B021",
+            "actual_id": "B021",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B022",
+            "actual_id": "B022",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B023",
+            "actual_id": "B023",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B024",
+            "actual_id": "B024",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B025",
+            "actual_id": "B025",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B026",
+            "actual_id": "B026",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B027",
+            "actual_id": "B027",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B028",
+            "actual_id": "B028",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B029",
+            "actual_id": "B029",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B030",
+            "actual_id": "B030",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B031",
+            "actual_id": "B031",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B032",
+            "actual_id": "B032",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B033",
+            "actual_id": "B033",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B034",
+            "actual_id": "B034",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B035",
+            "actual_id": "B035",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B036",
+            "actual_id": "B036",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B037",
+            "actual_id": "B037",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B038",
+            "actual_id": "B038",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B039",
+            "actual_id": "B039",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B040",
+            "actual_id": "B040",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B041",
+            "actual_id": "B041",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B042",
+            "actual_id": "B042",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B043",
+            "actual_id": "B043",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B044",
+            "actual_id": "B044",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B045",
+            "actual_id": "B045",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B046",
+            "actual_id": "B046",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B047",
+            "actual_id": "B047",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B048",
+            "actual_id": "B048",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B049",
+            "actual_id": "B049",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B050",
+            "actual_id": "B050",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B051",
+            "actual_id": "B051",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B052",
+            "actual_id": "B052",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B053",
+            "actual_id": "B053",
+            "type": "environment",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B054",
+            "actual_id": "B054",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B055",
+            "actual_id": "B055",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B056",
+            "actual_id": "B056",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B057",
+            "actual_id": "B057",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B058",
+            "actual_id": "B058",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B059",
+            "actual_id": "B059",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B060",
+            "actual_id": "B060",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B061",
+            "actual_id": "B061",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B062",
+            "actual_id": "B062",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B063",
+            "actual_id": "B063",
+            "type": "environment",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B064",
+            "actual_id": "B064",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B065",
+            "actual_id": "B065",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B066",
+            "actual_id": "B066",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B067",
+            "actual_id": "B067",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B068",
+            "actual_id": "B068",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B069",
+            "actual_id": "B069",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B070",
+            "actual_id": "B070",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B071",
+            "actual_id": "B071",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B072",
+            "actual_id": "B072",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B073",
+            "actual_id": "B073",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B074",
+            "actual_id": "B074",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B075",
+            "actual_id": "B075",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B076",
+            "actual_id": "B076",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B077",
+            "actual_id": "B077",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B078",
+            "actual_id": "B078",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B079",
+            "actual_id": "B079",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B080",
+            "actual_id": "B080",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B081",
+            "actual_id": "B081",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B082",
+            "actual_id": "B082",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B083",
+            "actual_id": "B083",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B084",
+            "actual_id": "B084",
+            "type": "table",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B085",
+            "actual_id": "B085",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B086",
+            "actual_id": "B086",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B087",
+            "actual_id": "B087",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B088",
+            "actual_id": "B088",
+            "type": "table",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B089",
+            "actual_id": "B089",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B090",
+            "actual_id": "B090",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B091",
+            "actual_id": "B091",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B092",
+            "actual_id": "B092",
+            "type": "table",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B093",
+            "actual_id": "B093",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B094",
+            "actual_id": "B094",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B095",
+            "actual_id": "B095",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B096",
+            "actual_id": "B096",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B097",
+            "actual_id": "B097",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B098",
+            "actual_id": "B098",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B099",
+            "actual_id": "B099",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B100",
+            "actual_id": "B100",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B101",
+            "actual_id": "B101",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B102",
+            "actual_id": "B102",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B103",
+            "actual_id": "B103",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B104",
+            "actual_id": "B104",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B105",
+            "actual_id": "B105",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B106",
+            "actual_id": "B106",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B107",
+            "actual_id": "B107",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B108",
+            "actual_id": "B108",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B109",
+            "actual_id": "B109",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B110",
+            "actual_id": "B110",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B111",
+            "actual_id": "B111",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B112",
+            "actual_id": "B112",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B113",
+            "actual_id": "B113",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B114",
+            "actual_id": "B114",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B115",
+            "actual_id": "B115",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B116",
+            "actual_id": "B116",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B117",
+            "actual_id": "B117",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B118",
+            "actual_id": "B118",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B119",
+            "actual_id": "B119",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B120",
+            "actual_id": "B120",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B121",
+            "actual_id": "B121",
+            "type": "environment",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B122",
+            "actual_id": "B122",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B123",
+            "actual_id": "B123",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B124",
+            "actual_id": "B124",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B125",
+            "actual_id": "B125",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B126",
+            "actual_id": "B126",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B127",
+            "actual_id": "B127",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B128",
+            "actual_id": "B128",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B129",
+            "actual_id": "B129",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B130",
+            "actual_id": "B130",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B131",
+            "actual_id": "B131",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B132",
+            "actual_id": "B132",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B133",
+            "actual_id": "B133",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B134",
+            "actual_id": "B134",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B135",
+            "actual_id": "B135",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B136",
+            "actual_id": "B136",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B137",
+            "actual_id": "B137",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B138",
+            "actual_id": "B138",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B139",
+            "actual_id": "B139",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B140",
+            "actual_id": "B140",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B141",
+            "actual_id": "B141",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B142",
+            "actual_id": "B142",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B143",
+            "actual_id": "B143",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B144",
+            "actual_id": "B144",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B145",
+            "actual_id": "B145",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B146",
+            "actual_id": "B146",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B147",
+            "actual_id": "B147",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B148",
+            "actual_id": "B148",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B149",
+            "actual_id": "B149",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B150",
+            "actual_id": "B150",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B151",
+            "actual_id": "B151",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B152",
+            "actual_id": "B152",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B153",
+            "actual_id": "B153",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B154",
+            "actual_id": "B154",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B155",
+            "actual_id": "B155",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B156",
+            "actual_id": "B156",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B157",
+            "actual_id": "B157",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B158",
+            "actual_id": "B158",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B159",
+            "actual_id": "B159",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B160",
+            "actual_id": "B160",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B161",
+            "actual_id": "B161",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B162",
+            "actual_id": "B162",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B163",
+            "actual_id": "B163",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B164",
+            "actual_id": "B164",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B165",
+            "actual_id": "B165",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B166",
+            "actual_id": "B166",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B167",
+            "actual_id": "B167",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B168",
+            "actual_id": "B168",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B169",
+            "actual_id": "B169",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B170",
+            "actual_id": "B170",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B171",
+            "actual_id": "B171",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B172",
+            "actual_id": "B172",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B173",
+            "actual_id": "B173",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B174",
+            "actual_id": "B174",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B175",
+            "actual_id": "B175",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B176",
+            "actual_id": "B176",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B177",
+            "actual_id": "B177",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B178",
+            "actual_id": "B178",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B179",
+            "actual_id": "B179",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B180",
+            "actual_id": "B180",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B181",
+            "actual_id": "B181",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B182",
+            "actual_id": "B182",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B183",
+            "actual_id": "B183",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B184",
+            "actual_id": "B184",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B185",
+            "actual_id": "B185",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B186",
+            "actual_id": "B186",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B187",
+            "actual_id": "B187",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B188",
+            "actual_id": "B188",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B189",
+            "actual_id": "B189",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B190",
+            "actual_id": "B190",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B191",
+            "actual_id": "B191",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B192",
+            "actual_id": "B192",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B193",
+            "actual_id": "B193",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B194",
+            "actual_id": "B194",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B195",
+            "actual_id": "B195",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B196",
+            "actual_id": "B196",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B197",
+            "actual_id": "B197",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B198",
+            "actual_id": "B198",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B199",
+            "actual_id": "B199",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B200",
+            "actual_id": "B200",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B201",
+            "actual_id": "B201",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B202",
+            "actual_id": "B202",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B203",
+            "actual_id": "B203",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B204",
+            "actual_id": "B204",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B205",
+            "actual_id": "B205",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B206",
+            "actual_id": "B206",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B207",
+            "actual_id": "B207",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B208",
+            "actual_id": "B208",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B209",
+            "actual_id": "B209",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B210",
+            "actual_id": "B210",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B211",
+            "actual_id": "B211",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B212",
+            "actual_id": "B212",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B213",
+            "actual_id": "B213",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B214",
+            "actual_id": "B214",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B215",
+            "actual_id": "B215",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B216",
+            "actual_id": "B216",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B217",
+            "actual_id": "B217",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B218",
+            "actual_id": "B218",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B219",
+            "actual_id": "B219",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B220",
+            "actual_id": "B220",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B221",
+            "actual_id": "B221",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B222",
+            "actual_id": "B222",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B223",
+            "actual_id": "B223",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B224",
+            "actual_id": "B224",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B225",
+            "actual_id": "B225",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B226",
+            "actual_id": "B226",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B227",
+            "actual_id": "B227",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B228",
+            "actual_id": "B228",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B229",
+            "actual_id": "B229",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B230",
+            "actual_id": "B230",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B231",
+            "actual_id": "B231",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B232",
+            "actual_id": "B232",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B233",
+            "actual_id": "B233",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B234",
+            "actual_id": "B234",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B235",
+            "actual_id": "B235",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B236",
+            "actual_id": "B236",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B237",
+            "actual_id": "B237",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B238",
+            "actual_id": "B238",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B239",
+            "actual_id": "B239",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B240",
+            "actual_id": "B240",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B241",
+            "actual_id": "B241",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B242",
+            "actual_id": "B242",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B243",
+            "actual_id": "B243",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B244",
+            "actual_id": "B244",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B245",
+            "actual_id": "B245",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B246",
+            "actual_id": "B246",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B247",
+            "actual_id": "B247",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B248",
+            "actual_id": "B248",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B249",
+            "actual_id": "B249",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B250",
+            "actual_id": "B250",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B251",
+            "actual_id": "B251",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B252",
+            "actual_id": "B252",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B253",
+            "actual_id": "B253",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B254",
+            "actual_id": "B254",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B255",
+            "actual_id": "B255",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B256",
+            "actual_id": "B256",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B257",
+            "actual_id": "B257",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B258",
+            "actual_id": "B258",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B259",
+            "actual_id": "B259",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B260",
+            "actual_id": "B260",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B261",
+            "actual_id": "B261",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B262",
+            "actual_id": "B262",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B263",
+            "actual_id": "B263",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B264",
+            "actual_id": "B264",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B265",
+            "actual_id": "B265",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B266",
+            "actual_id": "B266",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B267",
+            "actual_id": "B267",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B268",
+            "actual_id": "B268",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B269",
+            "actual_id": "B269",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B270",
+            "actual_id": "B270",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B271",
+            "actual_id": "B271",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B272",
+            "actual_id": "B272",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B273",
+            "actual_id": "B273",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B274",
+            "actual_id": "B274",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B275",
+            "actual_id": "B275",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B276",
+            "actual_id": "B276",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B277",
+            "actual_id": "B277",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B278",
+            "actual_id": "B278",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B279",
+            "actual_id": "B279",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B280",
+            "actual_id": "B280",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B281",
+            "actual_id": "B281",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B282",
+            "actual_id": "B282",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B283",
+            "actual_id": "B283",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B284",
+            "actual_id": "B284",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B285",
+            "actual_id": "B285",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B286",
+            "actual_id": "B286",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B287",
+            "actual_id": "B287",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          }
+        ]
+      },
+      "diff_metrics": {
+        "overall_similarity": 1.0,
+        "diff_hunks": 0,
+        "diff_added_lines": 0,
+        "diff_removed_lines": 0
+      },
+      "error_categorization": {
+        "over_applied": 0,
+        "under_applied": 0,
+        "kept_wrong_v1_lines": 0,
+        "removed_wrong_v1_lines": 0,
+        "corrupted": 0,
+        "error_summary": "Over-applied: 0, Under-applied: 0, Kept wrong v1: 0, Removed wrong v1: 0, Corrupted: 0"
+      }
+    },
+    "run_num": 1
+  }
+]

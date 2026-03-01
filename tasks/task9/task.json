@@ -1,0 +1,15 @@
+{
+  "task_id": "task9",
+  "title": "Resolve Merge Conflicts in Design Document",
+  "difficulty": "very-hard",
+  "description": "You are resolving merge conflicts in a technical design document. Two developers (A and B) independently edited design_v1.md, creating conflicting changes. The file design_conflicted.md contains the base document with 12 merge conflict markers.\n\nEach conflict is marked with:\n```\n<<<<<<< LOCAL (Developer A)\n[Developer A's version]\n=======\n[Developer B's version]\n>>>>>>> REMOTE (Developer B)\n```\n\nResolve ALL 12 conflicts using these rules:\n\n1. When both sides are identical: take either version (they agree)\n2. When one side only fixes a typo/spelling while the other ALSO adds substantive improvements (extra detail, better wording, or updated values): take the more comprehensive version\n3. When both sides make different substantive changes (different numbers, different approaches): prefer the REMOTE (Developer B) version\n\nAfter resolving:\n- There should be NO conflict markers remaining in the output\n- All 12 conflicts should be resolved\n- The rest of the document (non-conflicted parts) must remain exactly as-is\n- Do not add any new content or make any changes outside the conflict regions\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe conflicted file is at: WORK_DIR/design_conflicted.md\nThe original (pre-conflict) file is at: WORK_DIR/design_v1.md (for reference)\n\nWrite the resolved result to: WORK_DIR/output.md",
+  "doc_pair": ["design_conflicted.md", "design_v1.md"],
+  "output_file": "output.md",
+  "expected_file": "expected_output.md",
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["conflict_resolution"],
+    "reject": []
+  },
+  "notes": "This task tests the agent's ability to find and resolve merge conflicts scattered through a ~500-line document. The CLI agent can search for conflict markers (grep for '<<<<<<<'), process them one at a time, and verify all markers are removed. The diff-only agent must find all 12 conflicts in a large inline document and resolve them correctly in one pass. Some conflicts are trivial (both agree), some require judgment (one-sided improvement), and some require applying the REMOTE preference rule."
+}

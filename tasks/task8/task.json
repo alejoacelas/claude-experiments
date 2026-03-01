@@ -1,0 +1,15 @@
+{
+  "task_id": "task8",
+  "title": "Merge Design Doc: Update Only Prose, Preserve All Code Blocks",
+  "difficulty": "hard",
+  "description": "You are merging revisions into a technical design document. The revised version (design_v2.md) contains changes to both prose/text sections AND code blocks (Python, Go, Protobuf, bash, and ASCII diagrams).\n\nApply ALL changes from design_v2.md EXCEPT: keep every fenced code block exactly as it appears in design_v1.md. A fenced code block is any content between ``` markers (including ```python, ```go, ```protobuf, ```bash, and plain ```).\n\nSpecifically:\n- DO apply all prose/text changes: spelling, rewording, numbers, new sections, new paragraphs, metadata, tables, bullet points, etc.\n- DO NOT change any content inside fenced code blocks. The opening ``` line, the closing ``` line, and everything between them must remain exactly as in v1.\n- If v2 adds a new section that contains a code block, include the new section but use the NEW code block from v2 (since there's no v1 code block to preserve).\n- Inline code references (text in backticks like `QUORUM`) ARE prose and should be updated per v2.\n\nThis means you apply the full v2 merge for all prose, but every existing code fence in v1 stays unchanged even if v2 modified it.\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/design_v1.md\nThe revised file is at: WORK_DIR/design_v2.md\n\nWrite the result to: WORK_DIR/output.md",
+  "doc_pair": ["design_v1.md", "design_v2.md"],
+  "output_file": "output.md",
+  "expected_file": "expected_output.md",
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["prose_changes", "spelling", "new_sections", "tables", "metadata", "inline_code"],
+    "reject": ["code_block_changes"]
+  },
+  "notes": "This task tests whether the agent can identify code block boundaries (``` fences) and selectively apply changes outside them while preserving code inside. The v2 makes significant changes to the Python functions, Go example, protobuf definitions, and ASCII diagram. The agent must keep all of these as-is from v1 while applying all surrounding prose changes. Code blocks that are NEW in v2 (no v1 equivalent) should be included as-is from v2."
+}

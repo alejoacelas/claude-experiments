@@ -1,0 +1,1082 @@
+[
+  {
+    "run_id": "task5_cli_run1_20260301_032231",
+    "task_id": "task5",
+    "task_title": "Cherry-Pick Numbered Changes from Comparison Report",
+    "difficulty": "easy-medium",
+    "mode": "cli",
+    "timestamp": "20260301_032231",
+    "agent_duration": 205.00333881378174,
+    "agent_success": true,
+    "score": 93.1,
+    "metrics": {
+      "line_metrics": {
+        "line_precision": 0.9647887323943662,
+        "line_recall": 0.9716312056737588,
+        "line_f1": 0.9681978798586572,
+        "lines_correct": 274,
+        "lines_extra": 10,
+        "lines_missing": 8,
+        "total_expected_lines": 282,
+        "total_actual_lines": 284
+      },
+      "block_metrics": {
+        "block_exact_accuracy": 0.8551724137931035,
+        "block_close_accuracy": 0.9586206896551724,
+        "blocks_exact_match": 124,
+        "blocks_close_match": 15,
+        "blocks_missing": 6,
+        "blocks_extra": 2,
+        "total_expected_blocks": 145,
+        "total_actual_blocks": 141,
+        "block_details": [
+          {
+            "expected_id": "B000",
+            "actual_id": "B000",
+            "type": "metadata",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B001",
+            "actual_id": "B001",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B002",
+            "actual_id": "B002",
+            "type": "environment",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B003",
+            "actual_id": "B003",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B004",
+            "actual_id": "B004",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B005",
+            "actual_id": "B005",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B006",
+            "actual_id": "B006",
+            "type": "paragraph",
+            "similarity": 0.9835051546391752,
+            "status": "close_match",
+            "preview": "This fundamental limitation has spurred significant research interest in continu"
+          },
+          {
+            "expected_id": "B007",
+            "actual_id": "B010",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B008",
+            "type": "paragraph",
+            "similarity": 0.24728260869565216,
+            "status": "missing",
+            "preview": "Before discussing prior approaches, we highlight the key observation that motiva"
+          },
+          {
+            "expected_id": "B009",
+            "actual_id": "B007",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B010",
+            "actual_id": "B008",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B011",
+            "actual_id": "B009",
+            "type": "paragraph",
+            "similarity": 0.9898028552005439,
+            "status": "close_match",
+            "preview": "In this work, we propose Adaptive Memory Networks (AMN), which combine the stren"
+          },
+          {
+            "expected_id": "B012",
+            "actual_id": "B011",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B013",
+            "actual_id": "B012",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B014",
+            "actual_id": "B014",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B015",
+            "actual_id": "B015",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B016",
+            "actual_id": "B016",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B017",
+            "actual_id": "B017",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B018",
+            "actual_id": "B018",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B019",
+            "actual_id": "B019",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B020",
+            "actual_id": "B020",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B021",
+            "actual_id": "B021",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B022",
+            "actual_id": "B022",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B023",
+            "actual_id": "B023",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B024",
+            "actual_id": "B024",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B025",
+            "actual_id": "B025",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B026",
+            "actual_id": "B026",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B027",
+            "actual_id": "B027",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B028",
+            "actual_id": "B028",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B029",
+            "actual_id": "B029",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B030",
+            "actual_id": "B030",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B031",
+            "actual_id": "B031",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B032",
+            "actual_id": "B032",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B033",
+            "actual_id": "B133",
+            "type": "heading",
+            "similarity": 0.8235294117647058,
+            "status": "close_match",
+            "preview": "\\subsubsection{Task Context Estimator}"
+          },
+          {
+            "expected_id": "B034",
+            "actual_id": "B039",
+            "type": "paragraph",
+            "similarity": 0.7563352826510721,
+            "status": "partial_match",
+            "preview": "The task context estimator $h_\\psi$ is a lightweight recurrent module that proce"
+          },
+          {
+            "expected_id": "B035",
+            "actual_id": "B040",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B036",
+            "actual_id": "B042",
+            "type": "paragraph",
+            "similarity": 0.625,
+            "status": "partial_match",
+            "preview": "where $W$ is the window size. This context vector modulates the memory retrieval"
+          },
+          {
+            "expected_id": "B037",
+            "actual_id": "B033",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B038",
+            "actual_id": "B034",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B039",
+            "actual_id": "B035",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B040",
+            "actual_id": "B036",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B041",
+            "actual_id": "B037",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B042",
+            "actual_id": "B038",
+            "type": "equation",
+            "similarity": 0.8408163265306122,
+            "status": "close_match",
+            "preview": "\\begin{equation}\n    \\hat{z} = \\sigma(W_g [z; r]) \\odot z + (1 - \\sigma(W_g [z; "
+          },
+          {
+            "expected_id": "B043",
+            "type": "paragraph",
+            "similarity": 0.4146341463414634,
+            "status": "missing",
+            "preview": "where $\\sigma$ is the sigmoid function, $W_g$ is a learnable gating matrix, and "
+          },
+          {
+            "expected_id": "B044",
+            "actual_id": "B041",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B045",
+            "type": "paragraph",
+            "similarity": 0.27450980392156865,
+            "status": "missing",
+            "preview": "New memories are written to the module using a least-recently-used (LRU) replace"
+          },
+          {
+            "expected_id": "B046",
+            "actual_id": "B043",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B047",
+            "actual_id": "B044",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B048",
+            "actual_id": "B045",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B049",
+            "actual_id": "B046",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B050",
+            "actual_id": "B047",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B051",
+            "actual_id": "B048",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B052",
+            "actual_id": "B049",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B053",
+            "actual_id": "B050",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B054",
+            "actual_id": "B051",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B055",
+            "actual_id": "B052",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B056",
+            "actual_id": "B053",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B057",
+            "actual_id": "B054",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B058",
+            "actual_id": "B055",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B059",
+            "actual_id": "B056",
+            "type": "environment",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B060",
+            "actual_id": "B057",
+            "type": "paragraph",
+            "similarity": 0.8085106382978723,
+            "status": "close_match",
+            "preview": "The proof is provided in Appendix~\\ref{app:proof}. The key insight is that the c"
+          },
+          {
+            "expected_id": "B061",
+            "actual_id": "B058",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B062",
+            "actual_id": "B059",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B063",
+            "actual_id": "B060",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B064",
+            "actual_id": "B061",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B065",
+            "actual_id": "B062",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B066",
+            "actual_id": "B063",
+            "type": "equation",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B067",
+            "actual_id": "B064",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B068",
+            "actual_id": "B065",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B069",
+            "actual_id": "B066",
+            "type": "environment",
+            "similarity": 0.7887039838628341,
+            "status": "partial_match",
+            "preview": "\\begin{algorithm}\n\\caption{AMN Training Procedure}\n\\label{alg:training}\n\\begin{a"
+          },
+          {
+            "expected_id": "B070",
+            "actual_id": "B067",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B071",
+            "actual_id": "B068",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B072",
+            "actual_id": "B069",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B073",
+            "actual_id": "B070",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B074",
+            "actual_id": "B071",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B075",
+            "actual_id": "B072",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B076",
+            "actual_id": "B073",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B077",
+            "actual_id": "B074",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B078",
+            "actual_id": "B075",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B079",
+            "actual_id": "B076",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B080",
+            "actual_id": "B077",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B081",
+            "actual_id": "B078",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B082",
+            "actual_id": "B079",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B083",
+            "actual_id": "B080",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B084",
+            "actual_id": "B081",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B085",
+            "actual_id": "B082",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B086",
+            "actual_id": "B083",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B087",
+            "actual_id": "B084",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B088",
+            "actual_id": "B085",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B089",
+            "actual_id": "B086",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B090",
+            "actual_id": "B087",
+            "type": "table",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B091",
+            "actual_id": "B088",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B092",
+            "actual_id": "B089",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B093",
+            "actual_id": "B090",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B094",
+            "actual_id": "B091",
+            "type": "table",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B095",
+            "actual_id": "B092",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B096",
+            "actual_id": "B101",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B097",
+            "actual_id": "B103",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B098",
+            "actual_id": "B106",
+            "type": "table",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B099",
+            "actual_id": "B114",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B100",
+            "actual_id": "B093",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B101",
+            "actual_id": "B094",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B102",
+            "actual_id": "B095",
+            "type": "table",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B103",
+            "actual_id": "B096",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B104",
+            "actual_id": "B097",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B105",
+            "actual_id": "B098",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B106",
+            "actual_id": "B099",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B107",
+            "actual_id": "B100",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B108",
+            "actual_id": "B102",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B109",
+            "actual_id": "B104",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B110",
+            "actual_id": "B105",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B111",
+            "actual_id": "B107",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B112",
+            "actual_id": "B108",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B113",
+            "actual_id": "B109",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B114",
+            "actual_id": "B115",
+            "type": "heading",
+            "similarity": 0.5070422535211268,
+            "status": "partial_match",
+            "preview": "\\subsection{Role of the Task Context Estimator}"
+          },
+          {
+            "expected_id": "B115",
+            "actual_id": "B135",
+            "type": "paragraph",
+            "similarity": 0.945,
+            "status": "close_match",
+            "preview": "The task context estimator provides significant benefits beyond what is captured"
+          },
+          {
+            "expected_id": "B116",
+            "actual_id": "B136",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B117",
+            "actual_id": "B110",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B118",
+            "actual_id": "B111",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B119",
+            "actual_id": "B112",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B120",
+            "actual_id": "B113",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B121",
+            "actual_id": "B117",
+            "type": "heading",
+            "similarity": 0.5909090909090909,
+            "status": "partial_match",
+            "preview": "\\subsection{Limitations}"
+          },
+          {
+            "expected_id": "B122",
+            "actual_id": "B116",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B123",
+            "actual_id": "B118",
+            "type": "heading",
+            "similarity": 0.6666666666666666,
+            "status": "partial_match",
+            "preview": "\\section{Conclusion}"
+          },
+          {
+            "expected_id": "B124",
+            "actual_id": "B127",
+            "type": "paragraph",
+            "similarity": 0.5641025641025641,
+            "status": "partial_match",
+            "preview": "\\label{sec:conclusion}"
+          },
+          {
+            "expected_id": "B125",
+            "actual_id": "B119",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B126",
+            "actual_id": "B140",
+            "type": "paragraph",
+            "similarity": 0.6171821305841925,
+            "status": "partial_match",
+            "preview": "Our experimental results demonstrate consistent state-of-the-art performance acr"
+          },
+          {
+            "expected_id": "B127",
+            "actual_id": "B120",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B128",
+            "type": "paragraph",
+            "similarity": 0.16167664670658682,
+            "status": "missing",
+            "preview": "Future work will pursue several promising directions: adaptive memory sizing dri"
+          },
+          {
+            "expected_id": "B129",
+            "actual_id": "B122",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B130",
+            "actual_id": "B123",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B131",
+            "actual_id": "B124",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B132",
+            "actual_id": "B125",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B133",
+            "actual_id": "B126",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B134",
+            "actual_id": "B130",
+            "type": "paragraph",
+            "similarity": 0.7,
+            "status": "partial_match",
+            "preview": "\\label{app:proof}"
+          },
+          {
+            "expected_id": "B135",
+            "actual_id": "B128",
+            "type": "environment",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B136",
+            "actual_id": "B129",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B137",
+            "type": "paragraph",
+            "similarity": 0.3333333333333333,
+            "status": "missing",
+            "preview": "\\label{app:hyperparams}"
+          },
+          {
+            "expected_id": "B138",
+            "actual_id": "B131",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B139",
+            "actual_id": "B132",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B140",
+            "actual_id": "B134",
+            "type": "heading",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B141",
+            "type": "paragraph",
+            "similarity": 0.47058823529411764,
+            "status": "missing",
+            "preview": "\\label{app:streaming}"
+          },
+          {
+            "expected_id": "B142",
+            "actual_id": "B137",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B143",
+            "actual_id": "B138",
+            "type": "list",
+            "similarity": 1.0,
+            "status": "exact_match"
+          },
+          {
+            "expected_id": "B144",
+            "actual_id": "B139",
+            "type": "paragraph",
+            "similarity": 1.0,
+            "status": "exact_match"
+          }
+        ]
+      },
+      "diff_metrics": {
+        "overall_similarity": 0.8631193506999005,
+        "diff_hunks": 24,
+        "diff_added_lines": 78,
+        "diff_removed_lines": 88
+      },
+      "error_categorization": {
+        "over_applied": 8,
+        "under_applied": 2,
+        "kept_wrong_v1_lines": 2,
+        "removed_wrong_v1_lines": 5,
+        "corrupted": 1,
+        "error_summary": "Over-applied: 8, Under-applied: 2, Kept wrong v1: 2, Removed wrong v1: 5, Corrupted: 1"
+      }
+    },
+    "run_num": 1
+  }
+]

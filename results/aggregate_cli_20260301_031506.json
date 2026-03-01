@@ -1,0 +1,15 @@
+[
+  {
+    "run_id": "task1_cli_run1_20260301_031506",
+    "task_id": "task1",
+    "task_title": "Selective Paper Revision: Apply Only Formatting and Citation Updates",
+    "difficulty": "medium",
+    "mode": "cli",
+    "timestamp": "20260301_031506",
+    "agent_duration": 0.3234093189239502,
+    "agent_success": false,
+    "score": 0,
+    "metrics": {},
+    "run_num": 1
+  }
+]

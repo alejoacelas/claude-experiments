@@ -1,0 +1,15 @@
+[
+  {
+    "run_id": "task8_diff-only_run1_20260301_034351",
+    "task_id": "task8",
+    "task_title": "Merge Design Doc: Update Only Prose, Preserve All Code Blocks",
+    "difficulty": "hard",
+    "mode": "diff-only",
+    "timestamp": "20260301_034351",
+    "agent_duration": 900.039220571518,
+    "agent_success": false,
+    "score": 0,
+    "metrics": {},
+    "run_num": 1
+  }
+]

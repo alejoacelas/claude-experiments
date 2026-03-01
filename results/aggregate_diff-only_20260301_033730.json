@@ -1,0 +1,15 @@
+[
+  {
+    "run_id": "task5_diff-only_run1_20260301_032230",
+    "task_id": "task5",
+    "task_title": "Cherry-Pick Numbered Changes from Comparison Report",
+    "difficulty": "easy-medium",
+    "mode": "diff-only",
+    "timestamp": "20260301_032230",
+    "agent_duration": 900.0278539657593,
+    "agent_success": false,
+    "score": 0,
+    "metrics": {},
+    "run_num": 1
+  }
+]

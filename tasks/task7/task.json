@@ -1,0 +1,15 @@
+{
+  "task_id": "task7",
+  "title": "Merge Design Doc: Apply Content Changes But Preserve Structure",
+  "difficulty": "very-hard",
+  "description": "You are merging revisions into a technical design document. The revised version (design_v2.md) contains many changes: content updates, new sections, reordered sections, and spelling/style changes.\n\nApply ALL changes from design_v2.md to design_v1.md with these two exceptions:\n\n1. PRESERVE v1's section ordering. In v1, Section 2.2 is 'Node Architecture' and Section 2.3 is 'Data Partitioning'. In v2, these sections were swapped. Keep v1's ordering (Node Architecture first, Data Partitioning second), but DO apply the content changes within those sections.\n\n2. DO NOT add entirely new sections that don't exist in v1. Specifically, do NOT add:\n   - Section 6.3 'Change Streams' (new in v2)\n   - Section 6.6 'Lightweight Transactions' (new in v2)\n   - Section 7.5 'Comparison with Existing Systems' (new in v2)\n   - Section 9 'Operational Runbook' (new in v2, including 9.1 and 9.2)\n\nDO apply all other changes, including:\n- All spelling corrections and British English conversions\n- All number/specification updates\n- All rewording and clarifications\n- All code changes\n- All metadata updates (date, version, reviewers, status)\n- Content additions to EXISTING sections (e.g., new bullet points, expanded text)\n- Changes to the API section (new fields in protobuf messages, updated constraints, etc.) — just not the entirely new subsections\n- Changes to references, timeline, open questions\n- Footer text changes\n\nNote: Because you're preserving v1's section ordering but applying v2's content changes, you'll need to carefully apply the correct content changes to the sections in their original positions. The Node Architecture section should have v2's updated content but remain as Section 2.2, and Data Partitioning should have v2's updated content but remain as Section 2.3.\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/design_v1.md\nThe revised file is at: WORK_DIR/design_v2.md\n\nWrite the result to: WORK_DIR/output.md",
+  "doc_pair": ["design_v1.md", "design_v2.md"],
+  "output_file": "output.md",
+  "expected_file": "expected_output.md",
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["spelling", "british_english", "rewording", "number_updates", "code_changes", "metadata", "content_additions_to_existing_sections", "api_field_changes", "references", "timeline"],
+    "reject": ["new_sections", "section_reordering"]
+  },
+  "notes": "This task is very hard because: (1) sections 2.2 and 2.3 are swapped in v2, creating a confusing unified diff that looks like both sections were entirely rewritten, (2) the agent must apply v2's content changes but in v1's section order, (3) new sections interspersed with modified sections must be filtered out, (4) the design doc is ~500+ lines with many interleaved change types."
+}

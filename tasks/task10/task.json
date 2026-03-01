@@ -1,0 +1,15 @@
+{
+  "task_id": "task10",
+  "title": "Multi-Document Selective Merge: Apply Spelling Fixes Across Combined Document",
+  "difficulty": "very-hard",
+  "description": "You are working with a combined document (combined_v1.txt) that contains BOTH a LaTeX research paper AND a Markdown design document concatenated together. A revised version (combined_v2.txt) exists with hundreds of changes across both parts.\n\nApply ONLY genuine spelling corrections and typo fixes from the revised version. Do NOT apply any other changes.\n\nThe document has two parts:\n- PART 1: A LaTeX research paper (lines 1-400 approx)\n- PART 2: A Markdown design document (lines 402-893 approx)\n\nApply ONLY:\n- Genuine English spelling errors (words that are wrong in any variety of English)\n- Clear typos (missing letters, transposed letters, wrong words)\n\nDo NOT apply:\n- British English conversions (optimized->optimised, organized->organised, etc.)\n- Rewording or clarifications\n- New content, sections, or paragraphs\n- Number/specification changes\n- Code changes\n- Table formatting changes\n- Structural changes (section reordering, new subsections)\n- Metadata changes (dates, versions, authors)\n- LaTeX package additions\n- En-dash fixes (these are formatting, not spelling)\n\nKnown typos to fix in PART 2 (the design document):\n- 'Summery' -> 'Summary'\n- 'Consistancy' -> 'Consistency'\n- 'algorith' -> 'algorithm'\n- 'paralel' -> 'parallel'\n- 'asynchronusly' -> 'asynchronously'\n- 'hierachical' -> 'hierarchical'\n- 'then' used where 'than' is correct (2 occurrences)\n\nPART 1 (the LaTeX paper) has NO spelling errors — do not change any text in Part 1.\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/combined_v1.txt\nThe revised file is at: WORK_DIR/combined_v2.txt\n\nWrite the result to: WORK_DIR/output.txt",
+  "doc_pair": ["combined_v1.txt", "combined_v2.txt"],
+  "output_file": "output.txt",
+  "expected_file": "expected_output.txt",
+  "source_dir": "documents",
+  "change_categories": {
+    "apply": ["genuine_typos"],
+    "reject": ["british_english", "rewording", "new_content", "formatting", "numbers", "code", "metadata"]
+  },
+  "notes": "This task uses a ~900-line combined document with hundreds of changes across both parts. The diff alone is ~1100 lines. For the diff-only agent, the prompt includes ~900 + ~1100 + ~1100 = ~3100 lines of content. This tests whether scale impacts accuracy. The task itself is conceptually identical to task6 but applied to a much larger context."
+}
