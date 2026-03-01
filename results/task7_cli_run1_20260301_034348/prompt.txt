@@ -1,0 +1,47 @@
+You are performing a document comparison and editing task.
+
+TASK: Merge Design Doc: Apply Content Changes But Preserve Structure
+
+You are merging revisions into a technical design document. The revised version (design_v2.md) contains many changes: content updates, new sections, reordered sections, and spelling/style changes.
+
+Apply ALL changes from design_v2.md to design_v1.md with these two exceptions:
+
+1. PRESERVE v1's section ordering. In v1, Section 2.2 is 'Node Architecture' and Section 2.3 is 'Data Partitioning'. In v2, these sections were swapped. Keep v1's ordering (Node Architecture first, Data Partitioning second), but DO apply the content changes within those sections.
+
+2. DO NOT add entirely new sections that don't exist in v1. Specifically, do NOT add:
+   - Section 6.3 'Change Streams' (new in v2)
+   - Section 6.6 'Lightweight Transactions' (new in v2)
+   - Section 7.5 'Comparison with Existing Systems' (new in v2)
+   - Section 9 'Operational Runbook' (new in v2, including 9.1 and 9.2)
+
+DO apply all other changes, including:
+- All spelling corrections and British English conversions
+- All number/specification updates
+- All rewording and clarifications
+- All code changes
+- All metadata updates (date, version, reviewers, status)
+- Content additions to EXISTING sections (e.g., new bullet points, expanded text)
+- Changes to the API section (new fields in protobuf messages, updated constraints, etc.) — just not the entirely new subsections
+- Changes to references, timeline, open questions
+- Footer text changes
+
+Note: Because you're preserving v1's section ordering but applying v2's content changes, you'll need to carefully apply the correct content changes to the sections in their original positions. The Node Architecture section should have v2's updated content but remain as Section 2.2, and Data Partitioning should have v2's updated content but remain as Section 2.3.
+
+You have access to a document comparison tool at: /home/user/claude-experiments/doccompare/doccompare.py
+The original file is at: /home/user/claude-experiments/results/task7_cli_run1_20260301_034348/workspace/design_v1.md
+The revised file is at: /home/user/claude-experiments/results/task7_cli_run1_20260301_034348/workspace/design_v2.md
+
+Write the result to: /home/user/claude-experiments/results/task7_cli_run1_20260301_034348/workspace/output.md
+
+IMPORTANT INSTRUCTIONS:
+- Use the document comparison tool (python3 /home/user/claude-experiments/doccompare/doccompare.py) to analyze the differences between the two files.
+- The tool supports these commands:
+  - compare: Compare two documents block by block (use --format json for structured output)
+  - blocks: List all blocks in a document
+  - show: Show content of a specific block
+  - anchors: Show anchor points between two documents
+  - apply: Apply selected changes (use with caution, may need manual refinement)
+- Read both source files carefully before making changes.
+- You can use the tool's JSON output mode for programmatic analysis.
+- Write your final result to the output path specified in the task.
+- Be precise: only apply the changes specified in the task, nothing more, nothing less.
