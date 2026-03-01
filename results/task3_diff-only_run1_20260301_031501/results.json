@@ -1,0 +1,12 @@
+{
+  "run_id": "task3_diff-only_run1_20260301_031501",
+  "task_id": "task3",
+  "task_title": "Apply Only Small Wording Changes, Reject Large Structural Changes",
+  "difficulty": "hard",
+  "mode": "diff-only",
+  "timestamp": "20260301_031501",
+  "agent_duration": 0.2862417697906494,
+  "agent_success": false,
+  "score": 0,
+  "metrics": {}
+}

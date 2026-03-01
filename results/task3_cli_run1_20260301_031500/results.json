@@ -1,0 +1,12 @@
+{
+  "run_id": "task3_cli_run1_20260301_031500",
+  "task_id": "task3",
+  "task_title": "Apply Only Small Wording Changes, Reject Large Structural Changes",
+  "difficulty": "hard",
+  "mode": "cli",
+  "timestamp": "20260301_031500",
+  "agent_duration": 0.3355855941772461,
+  "agent_success": false,
+  "score": 0,
+  "metrics": {}
+}

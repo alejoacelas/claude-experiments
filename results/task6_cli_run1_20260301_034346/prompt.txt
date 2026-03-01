@@ -1,0 +1,51 @@
+You are performing a document comparison and editing task.
+
+TASK: Fix Only Genuine Spelling Errors in Design Document
+
+You are reviewing a technical design document (design_v1.md). A revised version (design_v2.md) exists with many changes, including spelling fixes, rewording, new content, and British English conversions.
+
+Your job is to fix ONLY the genuine spelling errors and typos in design_v1.md. The revised version converts to British English throughout (e.g., 'optimized' -> 'optimised', 'organized' -> 'organised'). These are NOT typos — they are intentional style changes that you must NOT apply.
+
+Apply ONLY these types of fixes:
+- Genuine misspellings (words that are incorrect in ANY variety of English)
+- Clear typos (missing letters, transposed letters)
+- Incorrect word usage that is clearly a typo (e.g., 'then' used where 'than' is correct)
+
+Do NOT apply:
+- British English conversions (optimized->optimised, organized->organised, aging->ageing, behavior->behaviour, etc.)
+- Rewording of sentences
+- New content or sections
+- Number or specification changes
+- Code changes
+- Structural changes (section reordering)
+- Any changes to section headings beyond spelling fixes
+- Date, version, or metadata changes
+- New reviewer additions
+
+Here are some examples of genuine typos to look for (this list may not be exhaustive):
+- 'Summery' should be 'Summary'
+- 'Consistancy' should be 'Consistency'
+- 'algorith' should be 'algorithm'
+- 'paralel' should be 'parallel'
+- 'asynchronusly' should be 'asynchronously'
+- 'hierachical' should be 'hierarchical'
+- 'then' used where 'than' is correct
+
+You have access to a document comparison tool at: /home/user/claude-experiments/doccompare/doccompare.py
+The original file is at: /home/user/claude-experiments/results/task6_cli_run1_20260301_034346/workspace/design_v1.md
+The revised file is at: /home/user/claude-experiments/results/task6_cli_run1_20260301_034346/workspace/design_v2.md
+
+Write the result to: /home/user/claude-experiments/results/task6_cli_run1_20260301_034346/workspace/output.md
+
+IMPORTANT INSTRUCTIONS:
+- Use the document comparison tool (python3 /home/user/claude-experiments/doccompare/doccompare.py) to analyze the differences between the two files.
+- The tool supports these commands:
+  - compare: Compare two documents block by block (use --format json for structured output)
+  - blocks: List all blocks in a document
+  - show: Show content of a specific block
+  - anchors: Show anchor points between two documents
+  - apply: Apply selected changes (use with caution, may need manual refinement)
+- Read both source files carefully before making changes.
+- You can use the tool's JSON output mode for programmatic analysis.
+- Write your final result to the output path specified in the task.
+- Be precise: only apply the changes specified in the task, nothing more, nothing less.

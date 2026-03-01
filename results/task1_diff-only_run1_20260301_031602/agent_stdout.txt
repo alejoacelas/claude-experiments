@@ -1,0 +1,3 @@
+The stop hook is requesting that uncommitted changes be committed and pushed. The `output.tex` file I created is untracked. There are also other untracked files and a modified file in the repository that appear to be from the test harness itself (not my work).
+
+I can stage and commit `output.tex` specifically. Should I go ahead and commit just the `output.tex` file I produced, or would you like me to include the other untracked files as well? The other files (`run_test.py` modification, aggregate JSON files, and other task directories) appear to be part of the broader test harness and may not be related to this task.

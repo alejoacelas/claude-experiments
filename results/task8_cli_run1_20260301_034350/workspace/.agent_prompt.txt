@@ -1,0 +1,34 @@
+You are performing a document comparison and editing task.
+
+TASK: Merge Design Doc: Update Only Prose, Preserve All Code Blocks
+
+You are merging revisions into a technical design document. The revised version (design_v2.md) contains changes to both prose/text sections AND code blocks (Python, Go, Protobuf, bash, and ASCII diagrams).
+
+Apply ALL changes from design_v2.md EXCEPT: keep every fenced code block exactly as it appears in design_v1.md. A fenced code block is any content between ``` markers (including ```python, ```go, ```protobuf, ```bash, and plain ```).
+
+Specifically:
+- DO apply all prose/text changes: spelling, rewording, numbers, new sections, new paragraphs, metadata, tables, bullet points, etc.
+- DO NOT change any content inside fenced code blocks. The opening ``` line, the closing ``` line, and everything between them must remain exactly as in v1.
+- If v2 adds a new section that contains a code block, include the new section but use the NEW code block from v2 (since there's no v1 code block to preserve).
+- Inline code references (text in backticks like `QUORUM`) ARE prose and should be updated per v2.
+
+This means you apply the full v2 merge for all prose, but every existing code fence in v1 stays unchanged even if v2 modified it.
+
+You have access to a document comparison tool at: /home/user/claude-experiments/doccompare/doccompare.py
+The original file is at: /home/user/claude-experiments/results/task8_cli_run1_20260301_034350/workspace/design_v1.md
+The revised file is at: /home/user/claude-experiments/results/task8_cli_run1_20260301_034350/workspace/design_v2.md
+
+Write the result to: /home/user/claude-experiments/results/task8_cli_run1_20260301_034350/workspace/output.md
+
+IMPORTANT INSTRUCTIONS:
+- Use the document comparison tool (python3 /home/user/claude-experiments/doccompare/doccompare.py) to analyze the differences between the two files.
+- The tool supports these commands:
+  - compare: Compare two documents block by block (use --format json for structured output)
+  - blocks: List all blocks in a document
+  - show: Show content of a specific block
+  - anchors: Show anchor points between two documents
+  - apply: Apply selected changes (use with caution, may need manual refinement)
+- Read both source files carefully before making changes.
+- You can use the tool's JSON output mode for programmatic analysis.
+- Write your final result to the output path specified in the task.
+- Be precise: only apply the changes specified in the task, nothing more, nothing less.

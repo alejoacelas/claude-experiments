@@ -1,0 +1,34 @@
+You are performing a document comparison and editing task.
+
+TASK: Cherry-Pick Numbered Changes from Comparison Report
+
+You are helping a researcher selectively apply changes from a revised paper. Use the document comparison tool to compare paper_v1.tex and paper_v2.tex, then apply ONLY the following specific numbered changes (as reported by the tool):
+
+Apply changes: 1, 3, 5, 6, 8, 9, 15, 17, 18, 19, 20, 29, 36, 50, 51, 52, 53, 63, 64, 65, 71, 72, 73, 75, 76
+
+These are the change numbers as reported by `doccompare compare` (not the block IDs).
+
+For 'added' changes, insert the new content in the appropriate location.
+For 'modified' changes, replace the v1 block with the v2 version.
+For 'deleted' changes, remove the block.
+
+All other changes should NOT be applied - keep the v1 version for everything else.
+
+You have access to a document comparison tool at: /home/user/claude-experiments/doccompare/doccompare.py
+The original file is at: /home/user/claude-experiments/results/task5_cli_run1_20260301_032231/workspace/paper_v1.tex
+The revised file is at: /home/user/claude-experiments/results/task5_cli_run1_20260301_032231/workspace/paper_v2.tex
+
+Write the result to: /home/user/claude-experiments/results/task5_cli_run1_20260301_032231/workspace/output.tex
+
+IMPORTANT INSTRUCTIONS:
+- Use the document comparison tool (python3 /home/user/claude-experiments/doccompare/doccompare.py) to analyze the differences between the two files.
+- The tool supports these commands:
+  - compare: Compare two documents block by block (use --format json for structured output)
+  - blocks: List all blocks in a document
+  - show: Show content of a specific block
+  - anchors: Show anchor points between two documents
+  - apply: Apply selected changes (use with caution, may need manual refinement)
+- Read both source files carefully before making changes.
+- You can use the tool's JSON output mode for programmatic analysis.
+- Write your final result to the output path specified in the task.
+- Be precise: only apply the changes specified in the task, nothing more, nothing less.

@@ -1,0 +1,37 @@
+You are performing a document comparison and editing task.
+
+TASK: Selective Paper Revision: Apply Only Formatting and Citation Updates
+
+You are helping a researcher update their LaTeX paper. The paper has been reviewed and a revised version (paper_v2.tex) exists with many changes. However, the researcher only wants to apply specific categories of changes from v2 to v1 right now:
+
+1. Apply all LaTeX formatting improvements (booktabs package, table formatting with toprule/midrule/bottomrule, proper number formatting with \, spacing, en-dash fixes like 12-18 -> 12--18)
+2. Apply the date change from 'October 2025' to 'January 2026'
+3. Apply all changes to the \hline to \toprule/\midrule/\bottomrule table formatting
+4. Apply the @{} column formatting additions in tables
+
+Do NOT apply:
+- Any new content (new sections, new paragraphs, new author)
+- Any rewording of existing text
+- Any new baselines (L2P) in tables
+- Any structural changes (moving paragraphs, adding subsections)
+
+Your output should be the modified paper_v1.tex with ONLY the formatting/citation changes applied.
+
+You have access to a document comparison tool at: /home/user/claude-experiments/doccompare/doccompare.py
+The original file is at: /home/user/claude-experiments/results/task1_cli_run1_20260301_032227/workspace/paper_v1.tex
+The revised file is at: /home/user/claude-experiments/results/task1_cli_run1_20260301_032227/workspace/paper_v2.tex
+
+Write the result to: /home/user/claude-experiments/results/task1_cli_run1_20260301_032227/workspace/output.tex
+
+IMPORTANT INSTRUCTIONS:
+- Use the document comparison tool (python3 /home/user/claude-experiments/doccompare/doccompare.py) to analyze the differences between the two files.
+- The tool supports these commands:
+  - compare: Compare two documents block by block (use --format json for structured output)
+  - blocks: List all blocks in a document
+  - show: Show content of a specific block
+  - anchors: Show anchor points between two documents
+  - apply: Apply selected changes (use with caution, may need manual refinement)
+- Read both source files carefully before making changes.
+- You can use the tool's JSON output mode for programmatic analysis.
+- Write your final result to the output path specified in the task.
+- Be precise: only apply the changes specified in the task, nothing more, nothing less.

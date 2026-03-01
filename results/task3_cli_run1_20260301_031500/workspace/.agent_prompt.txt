@@ -1,0 +1,46 @@
+You are performing a document comparison and editing task.
+
+TASK: Apply Only Small Wording Changes, Reject Large Structural Changes
+
+You are helping a researcher apply copyediting changes to their LaTeX paper. A revised version (paper_v2.tex) has many changes, but the researcher only wants to apply minor wording improvements - NOT major structural or content changes.
+
+Apply these types of changes from v2:
+1. Tense changes (e.g., 'can severely degrade' -> 'severely degrades')
+2. Small word substitutions that improve clarity (e.g., 'also known as' -> 'also referred to as', 'leading to' -> 'which raises')
+3. Minor phrase improvements (e.g., 'use attention-based mechanisms' -> 'employed attention-based mechanisms')
+4. Small clarifications (e.g., 'maintain performance' -> 'maintain good performance')
+5. Punctuation and typographic fixes (en-dashes, spacing)
+6. Reference style fixes (e.g., 'Appendix A' -> 'Appendix~\ref{app:proof}')
+
+Do NOT apply:
+- New sections or subsections
+- New paragraphs or sentences
+- New authors or date changes
+- New packages
+- Table restructuring
+- New baselines in tables or experiments
+- New equations or algorithm changes
+- Paragraph rearrangements
+- Deletion of existing content
+- Major rewrites of sentences (more than ~5 words changed)
+
+This is a copyediting pass. Be precise: apply only the small wording tweaks.
+
+You have access to a document comparison tool at: /home/user/claude-experiments/doccompare/doccompare.py
+The original file is at: /home/user/claude-experiments/results/task3_cli_run1_20260301_031500/workspace/paper_v1.tex
+The revised file is at: /home/user/claude-experiments/results/task3_cli_run1_20260301_031500/workspace/paper_v2.tex
+
+Write the result to: /home/user/claude-experiments/results/task3_cli_run1_20260301_031500/workspace/output.tex
+
+IMPORTANT INSTRUCTIONS:
+- Use the document comparison tool (python3 /home/user/claude-experiments/doccompare/doccompare.py) to analyze the differences between the two files.
+- The tool supports these commands:
+  - compare: Compare two documents block by block (use --format json for structured output)
+  - blocks: List all blocks in a document
+  - show: Show content of a specific block
+  - anchors: Show anchor points between two documents
+  - apply: Apply selected changes (use with caution, may need manual refinement)
+- Read both source files carefully before making changes.
+- You can use the tool's JSON output mode for programmatic analysis.
+- Write your final result to the output path specified in the task.
+- Be precise: only apply the changes specified in the task, nothing more, nothing less.

@@ -1,0 +1,45 @@
+You are performing a document comparison and editing task.
+
+TASK: Resolve Merge Conflicts in Design Document
+
+You are resolving merge conflicts in a technical design document. Two developers (A and B) independently edited design_v1.md, creating conflicting changes. The file design_conflicted.md contains the base document with 12 merge conflict markers.
+
+Each conflict is marked with:
+```
+<<<<<<< LOCAL (Developer A)
+[Developer A's version]
+=======
+[Developer B's version]
+>>>>>>> REMOTE (Developer B)
+```
+
+Resolve ALL 12 conflicts using these rules:
+
+1. When both sides are identical: take either version (they agree)
+2. When one side only fixes a typo/spelling while the other ALSO adds substantive improvements (extra detail, better wording, or updated values): take the more comprehensive version
+3. When both sides make different substantive changes (different numbers, different approaches): prefer the REMOTE (Developer B) version
+
+After resolving:
+- There should be NO conflict markers remaining in the output
+- All 12 conflicts should be resolved
+- The rest of the document (non-conflicted parts) must remain exactly as-is
+- Do not add any new content or make any changes outside the conflict regions
+
+You have access to a document comparison tool at: /home/user/claude-experiments/doccompare/doccompare.py
+The conflicted file is at: /home/user/claude-experiments/results/task9_cli_run1_20260301_041410/workspace/design_conflicted.md
+The original (pre-conflict) file is at: /home/user/claude-experiments/results/task9_cli_run1_20260301_041410/workspace/design_v1.md (for reference)
+
+Write the resolved result to: /home/user/claude-experiments/results/task9_cli_run1_20260301_041410/workspace/output.md
+
+IMPORTANT INSTRUCTIONS:
+- Use the document comparison tool (python3 /home/user/claude-experiments/doccompare/doccompare.py) to analyze the differences between the two files.
+- The tool supports these commands:
+  - compare: Compare two documents block by block (use --format json for structured output)
+  - blocks: List all blocks in a document
+  - show: Show content of a specific block
+  - anchors: Show anchor points between two documents
+  - apply: Apply selected changes (use with caution, may need manual refinement)
+- Read both source files carefully before making changes.
+- You can use the tool's JSON output mode for programmatic analysis.
+- Write your final result to the output path specified in the task.
+- Be precise: only apply the changes specified in the task, nothing more, nothing less.

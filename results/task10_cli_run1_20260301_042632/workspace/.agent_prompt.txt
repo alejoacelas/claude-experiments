@@ -1,0 +1,57 @@
+You are performing a document comparison and editing task.
+
+TASK: Multi-Document Selective Merge: Apply Spelling Fixes Across Combined Document
+
+You are working with a combined document (combined_v1.txt) that contains BOTH a LaTeX research paper AND a Markdown design document concatenated together. A revised version (combined_v2.txt) exists with hundreds of changes across both parts.
+
+Apply ONLY genuine spelling corrections and typo fixes from the revised version. Do NOT apply any other changes.
+
+The document has two parts:
+- PART 1: A LaTeX research paper (lines 1-400 approx)
+- PART 2: A Markdown design document (lines 402-893 approx)
+
+Apply ONLY:
+- Genuine English spelling errors (words that are wrong in any variety of English)
+- Clear typos (missing letters, transposed letters, wrong words)
+
+Do NOT apply:
+- British English conversions (optimized->optimised, organized->organised, etc.)
+- Rewording or clarifications
+- New content, sections, or paragraphs
+- Number/specification changes
+- Code changes
+- Table formatting changes
+- Structural changes (section reordering, new subsections)
+- Metadata changes (dates, versions, authors)
+- LaTeX package additions
+- En-dash fixes (these are formatting, not spelling)
+
+Known typos to fix in PART 2 (the design document):
+- 'Summery' -> 'Summary'
+- 'Consistancy' -> 'Consistency'
+- 'algorith' -> 'algorithm'
+- 'paralel' -> 'parallel'
+- 'asynchronusly' -> 'asynchronously'
+- 'hierachical' -> 'hierarchical'
+- 'then' used where 'than' is correct (2 occurrences)
+
+PART 1 (the LaTeX paper) has NO spelling errors — do not change any text in Part 1.
+
+You have access to a document comparison tool at: /home/user/claude-experiments/doccompare/doccompare.py
+The original file is at: /home/user/claude-experiments/results/task10_cli_run1_20260301_042632/workspace/combined_v1.txt
+The revised file is at: /home/user/claude-experiments/results/task10_cli_run1_20260301_042632/workspace/combined_v2.txt
+
+Write the result to: /home/user/claude-experiments/results/task10_cli_run1_20260301_042632/workspace/output.txt
+
+IMPORTANT INSTRUCTIONS:
+- Use the document comparison tool (python3 /home/user/claude-experiments/doccompare/doccompare.py) to analyze the differences between the two files.
+- The tool supports these commands:
+  - compare: Compare two documents block by block (use --format json for structured output)
+  - blocks: List all blocks in a document
+  - show: Show content of a specific block
+  - anchors: Show anchor points between two documents
+  - apply: Apply selected changes (use with caution, may need manual refinement)
+- Read both source files carefully before making changes.
+- You can use the tool's JSON output mode for programmatic analysis.
+- Write your final result to the output path specified in the task.
+- Be precise: only apply the changes specified in the task, nothing more, nothing less.

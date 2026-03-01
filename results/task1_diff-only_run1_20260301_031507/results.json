@@ -1,0 +1,12 @@
+{
+  "run_id": "task1_diff-only_run1_20260301_031507",
+  "task_id": "task1",
+  "task_title": "Selective Paper Revision: Apply Only Formatting and Citation Updates",
+  "difficulty": "medium",
+  "mode": "diff-only",
+  "timestamp": "20260301_031507",
+  "agent_duration": 0.2722513675689697,
+  "agent_success": false,
+  "score": 0,
+  "metrics": {}
+}
