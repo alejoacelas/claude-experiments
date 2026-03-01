@@ -1,0 +1,15 @@
+{
+  "task_id": "task11",
+  "title": "Composed: Formatting-Only Changes, Skip Experiments Section",
+  "difficulty": "hard",
+  "description": "This task composes TWO constraints from task1 and task4.\n\nApply ONLY formatting and citation changes from paper_v2.tex to paper_v1.tex, AND skip the entire Experiments section (Section 5).\n\nFormatting changes to apply (ONLY outside Experiments):\n1. Add \\usepackage{booktabs} to the preamble\n2. Change the date from 'October 2025' to 'January 2026'\n3. Fix en-dashes: '12-18\\%' should become '12--18\\%' (2 occurrences, in abstract and introduction)\n4. Fix spacing after abbreviations: 'S.C. is' -> 'S.C.\\ is' and 'P.R. is' -> 'P.R.\\ is' in Acknowledgments\n\nDo NOT apply:\n- ANY changes inside the Experiments section (Section 5, \\section{Experiments}), including table formatting changes (hline->toprule/midrule/bottomrule), @{} column formatting, or number formatting (5000->5,000, '4 MB'->'4\\,MB')\n- Any new content, new sections, new paragraphs, new author\n- Any rewording of existing text\n- Any new baselines in tables\n- Any structural changes\n\nThe Experiments section starts at \\section{Experiments} and ends just before \\section{Analysis and Discussion}. Everything in that range must remain exactly as in v1.\n\nYou have access to a document comparison tool at: TOOL_PATH/doccompare.py\nThe original file is at: WORK_DIR/paper_v1.tex\nThe revised file is at: WORK_DIR/paper_v2.tex\n\nWrite the result to: WORK_DIR/output.tex",
+  "doc_pair": ["paper_v1.tex", "paper_v2.tex"],
+  "source_dir": "documents",
+  "output_file": "output.tex",
+  "expected_file": "expected_output.tex",
+  "change_categories": {
+    "apply": ["formatting_outside_experiments"],
+    "reject": ["all_changes_in_experiments", "new_content", "rewording", "new_baselines", "structural_changes", "new_author", "formatting_in_experiments"]
+  },
+  "notes": "This task composes task1 (formatting-only) with task4 (skip experiments). The agent must apply a 2D filter: change TYPE (formatting only) AND document LOCATION (outside experiments). The tricky part is that the Experiments section contains formatting changes (3 tables with hline->booktabs, number formatting like 5000->5,000 and MB spacing) that must NOT be applied, while similar formatting changes outside Experiments (en-dashes, date, booktabs package, abbreviation spacing) MUST be applied."
+}
