@@ -1,0 +1,4 @@
+All files have been committed and pushed to the remote branch. The commit includes:
+- `output.tex` — the result of applying the formatting-only changes to paper_v1.tex
+- `paper_v1.tex`, `paper_v2.tex`, `.agent_prompt.txt` — workspace source files
+- `prompt.txt`, `tasks/task11/` — task definition and expected output files
